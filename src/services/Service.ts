@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: 'https://blogpessoal-uml7.onrender.com'
+    baseURL: 'baseURL: import.meta.env.VITE_API_URL'
 })
 
 export const cadastrarUsuario = async (url: string, dados: Object, setDados: Function) => {
@@ -20,6 +20,7 @@ export const buscar = async (url: string, setDados: Function, header: Object) =>
 }
 
 export const cadastrar = async (url: string, dados: Object, setDados: Function, header: Object) => {
+    console.log(dados);
     const resposta = await api.post(url, dados, header)
     setDados(resposta.data)
 }
