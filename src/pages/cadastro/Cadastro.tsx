@@ -36,7 +36,6 @@ function Cadastro() {
       ...usuario,
       [e.target.name]: e.target.value
     })
-
   }
 
   function handleConfirmarSenha(e: ChangeEvent<HTMLInputElement>){
@@ -119,6 +118,7 @@ function Cadastro() {
               className="border-2 border-slate-700 rounded p-2"
               value = {usuario.senha}
              onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+             autoComplete="new-password"  // Atributo adicionado
             />
           </div>
           <div className="flex flex-col w-full">
@@ -131,6 +131,7 @@ function Cadastro() {
               className="border-2 border-slate-700 rounded p-2"
               value={confirmaSenha}
               onChange={(e: ChangeEvent<HTMLInputElement>) => handleConfirmarSenha(e)}
+              autoComplete="new-password"  // Atributo adicionado
             />
           </div>
           <div className="flex justify-around w-full gap-8">

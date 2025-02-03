@@ -62,6 +62,7 @@ function Login() {
                             className="border-2 border-slate-700 rounded p-2"
                             value={usuarioLogin.senha}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                            autoComplete="current-password"  // Atributo adicionado
                         />
                     </div>
                     <button
