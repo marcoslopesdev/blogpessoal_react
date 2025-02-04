@@ -78,6 +78,7 @@ function Cadastro() {
               type="text"
               id="nome"
               name="nome"
+              autoComplete="on"
               placeholder="Nome"
               className="border-2 border-slate-700 rounded p-2"
              value = {usuario.nome}
@@ -90,6 +91,7 @@ function Cadastro() {
               type="text"
               id="usuario"
               name="usuario"
+              autoComplete="on"
               placeholder="Usuario"
               className="border-2 border-slate-700 rounded p-2"
               value = {usuario.usuario}
@@ -102,6 +104,7 @@ function Cadastro() {
               type="text"
               id="foto"
               name="foto"
+              autoComplete="on"
               placeholder="Foto"
               className="border-2 border-slate-700 rounded p-2"
               value = {usuario.foto}
@@ -118,7 +121,7 @@ function Cadastro() {
               className="border-2 border-slate-700 rounded p-2"
               value = {usuario.senha}
              onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-             autoComplete="new-password"  // Atributo adicionado
+             autoComplete="on"  // Atributo adicionado
             />
           </div>
           <div className="flex flex-col w-full">
@@ -131,7 +134,7 @@ function Cadastro() {
               className="border-2 border-slate-700 rounded p-2"
               value={confirmaSenha}
               onChange={(e: ChangeEvent<HTMLInputElement>) => handleConfirmarSenha(e)}
-              autoComplete="new-password"  // Atributo adicionado
+              autoComplete="on"  // Atributo adicionado
             />
           </div>
           <div className="flex justify-around w-full gap-8">

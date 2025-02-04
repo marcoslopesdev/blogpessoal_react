@@ -150,6 +150,7 @@ function FormPostagem() {
                     <label htmlFor="titulo">Título da Postagem</label>
                     <input
                         type="text"
+                        autoComplete="on"
                         placeholder="Titulo"
                         name="titulo"
                         required
@@ -162,6 +163,7 @@ function FormPostagem() {
                     <label htmlFor="titulo">Texto da Postagem</label>
                     <input
                         type="text"
+                        autoComplete="on"
                         placeholder="Texto"
                         name="texto"
                         required

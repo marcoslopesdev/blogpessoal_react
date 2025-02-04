@@ -102,6 +102,7 @@ function FormTema() {
                     <label htmlFor="descricao">Descrição do Tema</label>
                     <input
                         type="text"
+                        autoComplete="on"
                         placeholder="Descreva aqui seu tema"
                         name='descricao'
                         className="border-2 border-slate-700 rounded p-2"
