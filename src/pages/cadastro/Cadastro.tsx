@@ -44,15 +44,16 @@ function Cadastro() {
 
   async function cadastrarNovoUsuario(e: FormEvent<HTMLFormElement>){
     e.preventDefault()
-
+  
     if(confirmaSenha === usuario.senha && usuario.senha.length >= 8){
-
+  
       setIsLoading(true)
-
+  
       try{
         await cadastrarUsuario(`/usuarios/cadastrar`, usuario, setUsuario)
         alert('Usuário cadastrado com sucesso!')
       }catch(error){
+        console.log(error) // Adicionado para exibir o erro no console
         alert('Erro ao cadastrar o usuário!')
       }
     }else{
@@ -60,9 +61,10 @@ function Cadastro() {
       setUsuario({...usuario, senha: ''})
       setConfirmaSenha('')
     }
-
+  
     setIsLoading(false)
   }
+  
   
   return (
     <>
