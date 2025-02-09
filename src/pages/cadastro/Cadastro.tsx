@@ -50,7 +50,7 @@ function Cadastro() {
       setIsLoading(true)
   
       try{
-        await cadastrarUsuario(`/usuarios/cadastrar`, usuario, setUsuario)
+        await cadastrarUsuario(`/cadastrar`, usuario, setUsuario)
         alert('Usuário cadastrado com sucesso!')
       }catch(error){
         console.log(error) // Adicionado para exibir o erro no console
